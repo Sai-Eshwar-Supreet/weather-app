@@ -1,7 +1,7 @@
-import { state } from "../model/state";
-import { setLoader } from "../view/loadingManager";
-import { renderCard } from "../view/renderer";
-import { getGifUrl, getWeather } from "./webrequestManager";
+import { state } from '../model/state';
+import { setLoader } from '../view/loadingManager';
+import { renderCard } from '../view/renderer';
+import { getGifUrl, getWeather } from './webrequestManager';
 
 function extractWeatherData(data) {
   if (!data || !data.currentConditions || !data.days || data.days.length === 0) {
@@ -16,33 +16,32 @@ function extractWeatherData(data) {
   };
 }
 
-async function processSearch(query){
-    if(!query || query === state.query) return;
+async function processSearch(query) {
+  if (!query || query === state.query) return;
 
-    state.query = query;
+  state.query = query;
 
-    setLoader(true);
+  setLoader(true);
 
-    try{
-        await fetchData();
-    }
-    catch(error){
-        alert(`Error fetching data: ${error.message}`);
-    }
+  try {
+    await fetchData();
+  } catch (error) {
+    alert(`Error fetching data: ${error.message}`);
+  }
 
-    setLoader(false);
+  setLoader(false);
 
-    renderCard(state.weatherData, state.gifUrl);
+  renderCard(state.weatherData, state.gifUrl);
 }
 
-async function fetchData(){
-    try {
-        const weatherData = await getWeather(state.query);
-        state.weatherData = extractWeatherData(weatherData);
-        state.gifUrl = await getGifUrl(`${state.weatherData.condition}`);
-    } catch (error) {
-        alert(`Error fetching data: ${error.message}`);
-    }
+async function fetchData() {
+  try {
+    const weatherData = await getWeather(state.query);
+    state.weatherData = extractWeatherData(weatherData);
+    state.gifUrl = await getGifUrl(`${state.weatherData.condition}`);
+  } catch (error) {
+    alert(`Error fetching data: ${error.message}`);
+  }
 }
 
-export {processSearch};
+export { processSearch };

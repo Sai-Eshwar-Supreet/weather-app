@@ -9,8 +9,8 @@
     "deploy": "git subtree push --prefix dist origin gh-pages",
     "prettier": "prettier --write",
     "prettier:check": "prettier --check",
-    "lint": "eslint ./src/**/*.js",
-    "lint:fix": "eslint ./src/**/*.js --fix"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "repository": {
     "type": "git",

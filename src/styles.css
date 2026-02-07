@@ -1,152 +1,151 @@
 /* ==================== RESET ==================== */
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-*{
-    margin: 0;
-    font: inherit;
+* {
+  margin: 0;
+  font: inherit;
 }
 
-img{
-    display: block;
+img {
+  display: block;
 }
 
 /* ==================== Custom Styles ==================== */
 
-body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-body > *{
-    flex: 1;
-    padding: 16px;
+body > * {
+  flex: 1;
+  padding: 16px;
 }
 
-header{
-    max-height: 70px;
+header {
+  max-height: 70px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(245, 225, 195);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(245, 225, 195);
 }
-h1{
-    font-size: 2rem;
-}
-
-header > #search-form{
-    margin-left: auto;
-    display: flex;
-
+h1 {
+  font-size: 2rem;
 }
 
-
-input{
-    border-radius: 8px 0 0 8px;
-    padding: 8px;
-    min-width: 500px;
-
-    border: 1px solid lightgray;
+header > #search-form {
+  margin-left: auto;
+  display: flex;
 }
 
+input {
+  border-radius: 8px 0 0 8px;
+  padding: 8px;
+  min-width: 500px;
 
-#search-form > button{
-    border-radius: 0 8px 8px 0;
-    border: none;
-
-    background-color: rgb(255, 153, 0);
+  border: 1px solid lightgray;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#search-form > button {
+  border-radius: 0 8px 8px 0;
+  border: none;
+
+  background-color: rgb(255, 153, 0);
 }
 
-.card-container{
-    border-radius: 8px;
-    
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 500px;
-    min-width: 400px;
-
-    gap: 4px;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.img-container{
-    height: 250px;
-    margin-top: 32px;
+.card-container {
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 500px;
+  min-width: 400px;
+
+  gap: 4px;
 }
 
-#gif-img{
-    height: 100%;
-    object-fit: contain;
-
-    margin: 0 auto;
+.img-container {
+  height: 250px;
+  margin-top: 32px;
 }
 
-#condition{
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+#gif-img {
+  height: 100%;
+  object-fit: contain;
+
+  margin: 0 auto;
 }
 
-#location, #date-time{
-    font-size: 1rem;
-    color: rgb(83, 83, 145);
-    font-weight: 500;
+#condition {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
 }
 
-#temperature{
-    font-size: 3rem;
-    font-weight: 800;
-
-    margin: 16px 0 0 8px;
+#location,
+#date-time {
+  font-size: 1rem;
+  color: rgb(83, 83, 145);
+  font-weight: 500;
 }
 
-#feels-like{
-    font-size: 0.95rem;
-    font-weight: 500;   
+#temperature {
+  font-size: 3rem;
+  font-weight: 800;
 
+  margin: 16px 0 0 8px;
 }
 
-#loading-panel{
-    position: fixed;
-    margin: auto;
-    padding: var(--space-large);
-    
-    border: none;
-    outline: none;
-    background: transparent;
-    overflow: visible;
+#feels-like {
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
-#loading-panel img{
-    width: 100px;
+#loading-panel {
+  position: fixed;
+  margin: auto;
+  padding: var(--space-large);
 
-    animation: spin 2s linear infinite;
+  border: none;
+  outline: none;
+  background: transparent;
+  overflow: visible;
+}
+
+#loading-panel img {
+  width: 100px;
+
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-dialog::backdrop{
-    background-color: rgba(0, 0, 0, 0.3);
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
 
-    backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }

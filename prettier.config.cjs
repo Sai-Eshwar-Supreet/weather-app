@@ -3,36 +3,36 @@ module.exports = {
 
   overrides: [
     {
-      files: ["**/*.js", "**/*.cjs"],
+      files: ['**/*.js', '**/*.cjs'],
       options: {
         semi: true,
         singleQuote: true,
       },
     },
     {
-      files: "**/*.json",
+      files: '**/*.json',
       options: {
         singleQuote: false,
       },
     },
     {
-      files: "**/*.js",
+      files: '**/*.js',
       options: {
         tabWidth: 2,
         useTabs: false,
-        trailingComma: "es5",
+        trailingComma: 'es5',
         bracketSpacing: true,
-        arrowParens: "always",
+        arrowParens: 'always',
       },
     },
     {
-      files: "**/*.html",
+      files: '**/*.html',
       options: {
         printWidth: 120,
         tabWidth: 2,
         useTabs: false,
         bracketSpacing: true,
-        htmlWhitespaceSensitivity: "css",
+        htmlWhitespaceSensitivity: 'css',
         singleQuote: false,
       },
     },

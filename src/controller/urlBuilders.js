@@ -1,4 +1,4 @@
-import { API_KEY } from "./apiKey";
+import { API_KEY } from './apiKey';
 
 function buildWeatherURL(location, date = undefined) {
   const apiKey = API_KEY.visualCrossing;
@@ -36,4 +36,4 @@ function buildGiffyURL(query) {
   return `${baseURL}?${params.toString()}`;
 }
 
-export {buildWeatherURL, buildGiffyURL}
+export { buildWeatherURL, buildGiffyURL };

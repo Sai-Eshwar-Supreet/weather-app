@@ -1,4 +1,4 @@
-import { buildGiffyURL, buildWeatherURL } from "./urlBuilders";
+import { buildGiffyURL, buildWeatherURL } from './urlBuilders';
 
 async function getWeather(location) {
   const url = buildWeatherURL(location, new Date());
@@ -28,4 +28,4 @@ async function getGifUrl(query) {
   return data.data.images.original.url;
 }
 
-export {getWeather, getGifUrl}
+export { getWeather, getGifUrl };

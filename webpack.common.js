@@ -26,7 +26,7 @@ module.exports = {
       {
         test: /\.html$/i,
         use: ['html-loader'],
-      }
+      },
     ],
   },
 };
