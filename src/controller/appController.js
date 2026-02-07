@@ -27,7 +27,7 @@ async function processSearch(query){
         await fetchData();
     }
     catch(error){
-        console.error("Error fetching data: " + error);
+        alert(`Error fetching data: ${error.message}`);
     }
 
     setLoader(false);
@@ -39,11 +39,9 @@ async function fetchData(){
     try {
         const weatherData = await getWeather(state.query);
         state.weatherData = extractWeatherData(weatherData);
-
-        console.log('Weather Info:', state.weatherData);
         state.gifUrl = await getGifUrl(`${state.weatherData.condition}`);
     } catch (error) {
-        console.error('Error gathering data:', error);
+        alert(`Error fetching data: ${error.message}`);
     }
 }
 

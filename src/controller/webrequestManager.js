@@ -22,8 +22,6 @@ async function getGifUrl(query) {
   }
 
   const data = await response.json();
-
-  console.log('Giphy API response:', data);
   if (data.data.length === 0) {
     throw new Error('No GIFs found for the given query');
   }
