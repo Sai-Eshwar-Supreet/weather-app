@@ -3,20 +3,20 @@ module.exports = {
 
   overrides: [
     {
-      files: ["*.js", ".cjs"],
+      files: ["**/*.js", "**/*.cjs"],
       options: {
         semi: true,
         singleQuote: true,
       },
     },
     {
-      files: "*.json",
+      files: "**/*.json",
       options: {
         singleQuote: false,
       },
     },
     {
-      files: "./src/js",
+      files: "**/*.js",
       options: {
         tabWidth: 2,
         useTabs: false,
@@ -26,7 +26,7 @@ module.exports = {
       },
     },
     {
-      files: "*.html",
+      files: "**/*.html",
       options: {
         printWidth: 120,
         tabWidth: 2,
