@@ -6,5 +6,27 @@
     <title>Weather App</title>
   </head>
   <body>
+    <header>
+      <h1>Weather App</h1>
+      <form id="search-form" action="" method="get">
+        <input type="text" name="location" placeholder="Enter location" required />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <div class="card-container">
+        <p id="condition">NA</p>
+        <p id="location">NA</p>
+        <p id="date-time">NA</p>
+        <p id="temperature">NA</p>
+        <p id="feels-like">NA</p>
+        <div class="img-container">
+          <img id="gif-img" src="#" alt="" />
+        </div>
+      </div>
+    </main>
+    <dialog id="loading-panel">
+        <div class="loading-container"><img src="./assets/Loading icon.png" alt="Loading"></div>
+    </dialog>
   </body>
 </html>
